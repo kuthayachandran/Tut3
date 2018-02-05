@@ -31,8 +31,6 @@ void save_student(struct Student student) {
         printf("Error Reading File\n");
         exit (0);
     }
-    fprintf(myFile, "%d ,", student.id);
-    fprintf(myFile, "%d ,", student.age);
-    fprintf(myFile, "%d", student.year);
+    fprintf(myFile, "(%d, " "%d, " "%d)" , student.id, student.age, student.year);
     fclose(myFile);
 }
